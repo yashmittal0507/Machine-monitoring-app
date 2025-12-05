@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3002';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3002';
 
 export async function apiRequest(endpoint: string, options: RequestInit = {}) {
     const token = localStorage.getItem('token');
